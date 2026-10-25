@@ -21,3 +21,9 @@ function changeStyle() {
 		text.style.textDecoration = "none";
 	}
 }
+
+// "Moo" button: uppercase the text.
+function moo() {
+	var text = document.getElementById("userText");
+	text.value = text.value.toUpperCase();
+}
