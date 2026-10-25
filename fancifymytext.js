@@ -22,8 +22,23 @@ function changeStyle() {
 	}
 }
 
-// "Moo" button: uppercase the text.
+// "Moo" button: uppercase the text and add "-Moo" to the
+// last word of each sentence (a sentence ends with ".").
 function moo() {
 	var text = document.getElementById("userText");
-	text.value = text.value.toUpperCase();
+	var str = text.value.toUpperCase();
+
+	// "HI THERE. HOW ARE YOU." -> ["HI THERE", " HOW ARE YOU", ""]
+	var parts = str.split(".");
+
+	// Skip the last piece: it comes after the final period,
+	// so it isn't a finished sentence.
+	for (var i = 0; i < parts.length - 1; i++) {
+		if (parts[i].trim() != "") {
+			parts[i] = parts[i] + "-Moo";
+		}
+	}
+
+	// Put the periods back.
+	text.value = parts.join(".");
 }
