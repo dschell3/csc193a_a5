@@ -1,6 +1,7 @@
 // Fancify my Text
 
-// "Bigger!" button: test that the onclick handler runs.
+// "Bigger!" button: set the text area's font size to 24pt.
+// (Started as alert("Hello, world!") to test the onclick handler.)
 function makeBigger() {
-	alert("Hello, world!");
+	document.getElementById("userText").style.fontSize = "24pt";
 }
