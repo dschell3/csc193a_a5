@@ -6,7 +6,13 @@ function makeBigger() {
 	document.getElementById("userText").style.fontSize = "24pt";
 }
 
-// Radio buttons: test that the onchange handler runs.
+// Radio buttons: FancyShmancy = bold. BoringBetty = back to normal.
 function changeStyle() {
-	alert("Radio changed!");
+	var text = document.getElementById("userText");
+
+	if (document.getElementById("fancy").checked) {
+		text.style.fontWeight = "bold";
+	} else {
+		text.style.fontWeight = "normal";
+	}
 }
