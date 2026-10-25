@@ -5,3 +5,8 @@
 function makeBigger() {
 	document.getElementById("userText").style.fontSize = "24pt";
 }
+
+// Radio buttons: test that the onchange handler runs.
+function changeStyle() {
+	alert("Radio changed!");
+}
