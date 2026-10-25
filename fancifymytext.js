@@ -6,13 +6,18 @@ function makeBigger() {
 	document.getElementById("userText").style.fontSize = "24pt";
 }
 
-// Radio buttons: FancyShmancy = bold. BoringBetty = back to normal.
+// Radio buttons: FancyShmancy = bold, blue, underlined.
+// BoringBetty = back to normal.
 function changeStyle() {
 	var text = document.getElementById("userText");
 
 	if (document.getElementById("fancy").checked) {
 		text.style.fontWeight = "bold";
+		text.style.color = "blue";
+		text.style.textDecoration = "underline";
 	} else {
 		text.style.fontWeight = "normal";
+		text.style.color = "black";
+		text.style.textDecoration = "none";
 	}
 }
